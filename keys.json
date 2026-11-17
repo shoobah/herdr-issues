@@ -1,0 +1,10 @@
+{
+  "global": {
+    "cmd-i": "mod.open:issues"
+  },
+  "mod:issues": {
+    "escape": "issues.escape",
+    "tab": "issues.tab",
+    "shift-tab": "issues.backtab"
+  }
+}
