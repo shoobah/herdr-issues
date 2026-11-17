@@ -8,6 +8,18 @@ A [Herdr](https://herdr.dev) mod that shows your GitHub issues in a popup, with 
 
 ## Install
 
+With the Herdr CLI (macOS and Linux):
+
+1. Run `herdr plugin install shoobah/herdr-issues`.
+2. Sign in to the GitHub CLI with `gh auth login`.
+3. In the Herdr app, push ⌘I.
+
+The install copies `mods/issues/` into `~/.config/herdr-app/mods/` (or `$HERDR_APP_HOME/mods/`). It also adds the keys of `keys.json` to the `keys.json` of the app. If ⌘I is already bound, the install does not change it. Then bind `mod.open:issues` to a different key yourself. `herdr plugin update` installs the new version of the mod and replaces the files in `mods/issues/`.
+
+The repo is a mod for the Herdr desktop app, not a TUI plugin. `herdr-plugin.toml` only lists it on the [Herdr marketplace](https://herdr.dev/plugins/) and runs `scripts/install-app-mod.sh`. It adds no actions or panes to the TUI.
+
+By hand:
+
 1. Copy `mods/issues/` into `~/.config/herdr-app/mods/`.
 2. Merge `keys.json` into `~/.config/herdr-app/keys.json`. It binds ⌘I to open the popup.
 3. Sign in to the GitHub CLI with `gh auth login`.
